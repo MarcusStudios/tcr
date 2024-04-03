@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <form>
+    <div class="navbar">
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho">Carrinho</a>
+        <a href="login.html" class=>Login</a>
+      </div>
+    <div class="forms">
+
+
+         <form>
         <div>
             <div><label>Digite seu Email</label></div>
             <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()" />
@@ -42,6 +51,8 @@
         };
         firebase.initializeApp(firebaseConfig);
     </script>
+     </div>
+   
 </body>
 
 </html>

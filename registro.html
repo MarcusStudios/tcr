@@ -7,38 +7,48 @@
     <title>Tela de Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
-    <form>
-        <div>
-            <div><label>Digite seu Email</label></div>
-            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()" />
+    <div class="navbar">
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="carrinho">Carrinho</a>
+        <a href="login.html" class=>Login</a>
+    </div>
+    <div class="forms">
+        <form>
             <div>
-                <div><label>Digite sua Senha</label></div>
-                <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()" />
-            </div>
-            <div>
-                <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Cadastre-se</button>
-            
-           
-                
-            </div>
-           
-    </form>
-    <script src="index.js"> </script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDr_q40z9G1bfGp8OGa3BHrEKsGGUGQ7ss",
-            authDomain: "web1-9c8a5.firebaseapp.com",
-            projectId: "web1-9c8a5",
-            storageBucket: "web1-9c8a5.appspot.com",
-            messagingSenderId: "152475856230",
-            appId: "1:152475856230:web:f8388512e46a34d56deca7"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
+                <div><label>Digite seu Email</label></div>
+                <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()" />
+                <div>
+                    <div><label>Digite sua Senha</label></div>
+                    <input type="password" name="password" id="password" placeholder="Senha"
+                        onchange="validateFields()" />
+                </div>
+                <div>
+                    <button type="button" class="solid" id="login-button" disabled="true"
+                        onclick="login()">Cadastre-se</button>
+
+
+
+                </div>
+
+        </form>
+        <script src="index.js"> </script>
+        <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyDr_q40z9G1bfGp8OGa3BHrEKsGGUGQ7ss",
+                authDomain: "web1-9c8a5.firebaseapp.com",
+                projectId: "web1-9c8a5",
+                storageBucket: "web1-9c8a5.appspot.com",
+                messagingSenderId: "152475856230",
+                appId: "1:152475856230:web:f8388512e46a34d56deca7"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+    </div>
+
 </body>
 
 </html>
