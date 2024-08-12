@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html" class="w3-bar-item w3-button">Home</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="car.html">Carrinho</a>
-        <a href="login.html" class=>Login</a>
-      </div>
-    <h1>Produtos</h1>
+    <div class="container">
+        <h1>CADASTRO DE PRODUTOS</h1>
+            <input type="text" id="codigo" placeholder="Código" required>
+            <input type="text" id="produto" placeholder="Nome do Produto" required>
+            <input type="text" id="categoria" placeholder="Categoria" required>
+            <input type="text" id="quantidade" placeholder="Quantidade" required>
+            <input type="text" id="valor" placeholder="Valor do Produto" required>
+            <input id="cadastrarProduto" type="submit" value="Cadastrar Produto" >
+    </div>
+    <div class="container">
+        <h1>BUSCA E ATUALIZAÇÃO NOS PRODUTOS</h1>
+            <input type="text" id="idProduto" placeholder="Enter ID" required>
+            <input id="buscarProduto" type="submit" value="Buscar Produto" style="background-color: #0598dc;">
 
-    <footer class="footer">
-        <p>© 2024 Moveis. Todos os direitos reservados.</p>
-      </footer>
+            <input type="text" id="dadoProduto" placeholder="Produto">
+            <input type="text" id="dadoCategoria" placeholder="Categoria">
+            <input type="text" id="dadoQuantidade" placeholder="Quantidade">
+            <input type="text" id="dadoValor" placeholder="Valor do Produto">
+            <input id="atualizarProduto" type="submit" value="Atualizar Produto" style="background-color: #dcb105;">
+            
+            <input id="deletarProduto" type="submit" value="Deletar Produto" style="background-color: #dc0905;">
+    </div>
+
+    <script type="module" src="produtos.js"></script>
 </body>
 </html>
