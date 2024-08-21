@@ -29,65 +29,7 @@
     <div id="3d-model" style="width: 100%; height: 400px; position: relative;"></div>
   </div>
 
-  <script src="script.js"></script>
-  <script>
-    // Configurações básicas
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // Ativar transparência
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('3d-model').appendChild(renderer.domElement);
-
-    // Luz ambiente e direcional
-    const ambientLight = new THREE.AmbientLight(0x404040, 2);
-    scene.add(ambientLight);
-    
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(1, 1, 1).normalize();
-    scene.add(directionalLight);
-
-    // Carregando o modelo 3D
-    const loader = new THREE.GLTFLoader();
-    let model;
-    loader.load('modelo3d/scene.gltf', function (gltf) {
-      model = gltf.scene;
-      scene.add(model);
-
-      // Centralizar e ajustar o tamanho do modelo
-      const box = new THREE.Box3().setFromObject(model);
-      const center = box.getCenter(new THREE.Vector3());
-      const size = box.getSize(new THREE.Vector3());
-
-      model.position.x += (model.position.x - center.x);
-      model.position.y += (model.position.y - center.y);
-      model.position.z += (model.position.z - center.z);
-
-      const maxAxis = Math.max(size.x, size.y, size.z);
-      model.scale.multiplyScalar(1 / maxAxis);
-
-      animate();
-    });
-
-    camera.position.z = 2;
-
-    // Função de animação
-    function animate() {
-      requestAnimationFrame(animate);
-
-      if (model) {
-        model.rotation.y += 0.01; // Rotação do modelo em torno do eixo Y
-      }
-
-      renderer.render(scene, camera);
-    }
-
-    // Responsividade
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  </script>
+ 
 
   <footer class="footer">
     <p>© 2024 Móveis. Todos os direitos reservados.</p>
